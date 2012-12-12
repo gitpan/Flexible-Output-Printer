@@ -8,4 +8,6 @@ Revision history for Perl extension Printer.
 0.0.4.1 Tue Dec 11 21:14:24 2012
 	- Added some support for a Bash-like echo and added println. 
 0.0.4.2 
-	- Fixed the broken test(s).   
+	- Fixed the broken test(s).  
+-------- Changed from current versioning scheme to a more CPAN-like one.  Major.Minor.Revision ------
+0.4.3  -  Re-Fixed the broken test.  
