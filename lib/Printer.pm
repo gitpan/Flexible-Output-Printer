@@ -1,4 +1,4 @@
-#!/usr/bin/env perl
+#/usr/bin/env perl
 =begin LICENSE
 +--------------------------------------------------------------------------------------+
 | BSD-3 OSI License                                                                    |
@@ -42,9 +42,9 @@ use warnings;
 use Exporter;
 use vars qw(@ISA @EXPORT);
 
-our $VERSION = '0.4.4';
+our $VERSION = '0.4.5';
 @ISA = qw(Exporter);
-@EXPORT = qw(puts putc);
+@EXPORT = qw(puts putc println echo);
 
 
 sub puts
