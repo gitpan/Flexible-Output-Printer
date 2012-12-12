@@ -10,4 +10,8 @@ Revision history for Perl extension Printer.
 0.0.4.2 
 	- Fixed the broken test(s).  
 -------- Changed from current versioning scheme to a more CPAN-like one.  Major.Minor.Revision ------
-0.4.3  -  Re-Fixed the broken test.  
+0.4.3  -  Re-Fixed the broken test. 
+
+12/12/12 - 01:43:52 am
+----------------------
+0.4.4  -  Once again... fixed the broken test, which mysteriously seems to keep on breaking... sigh.   

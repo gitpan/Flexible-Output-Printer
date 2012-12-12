@@ -42,7 +42,7 @@ use warnings;
 use Exporter;
 use vars qw(@ISA @EXPORT);
 
-our $VERSION = '0.4.3';
+our $VERSION = '0.4.4';
 @ISA = qw(Exporter);
 @EXPORT = qw(puts putc);
 

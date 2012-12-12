@@ -5,7 +5,7 @@ BEGIN { use_ok('Printer') };
 
 Flexible::Output::Printer::putc('h');
 
-Ez::Printer::puts('Hello', ' World!');
+Flexible::Output::Printer::puts('Hello', ' World!');
 
 
  
