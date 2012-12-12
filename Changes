@@ -6,4 +6,6 @@ Revision history for Perl extension Printer.
 0.0.3 Tue Dec 11 17:46:34 2012
 	- Added putc and puts, and yes, putc will only put one character at a time.  
 0.0.4.1 Tue Dec 11 21:14:24 2012
-	- Added some support for a Bash-like echo and added println.  
+	- Added some support for a Bash-like echo and added println. 
+0.0.4.2 
+	- Fixed the broken test(s).   
