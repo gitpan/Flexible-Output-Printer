@@ -1,0 +1,8 @@
+#!/bin/bash
+
+make manifest
+perl Makefile.PL
+make
+make test
+sudo make install UNINST=1
+

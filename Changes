@@ -14,4 +14,40 @@ Revision history for Perl extension Printer.
 
 12/12/12 - 01:43:52 am
 ----------------------
-0.4.4  -  Once again... fixed the broken test, which mysteriously seems to keep on breaking... sigh.   
+0.4.4  -  Once again... fixed the broken test, which mysteriously seems to keep on breaking... sigh.  
+
+12/12/12 - 03:41:49 am
+----------------------
+0.4.5, 0.4.6, 0.4.7    => Fixed the install location so that 'use Flexible::Output::Printer' should actually work for once.  
+
+12/12/12 - 04:24:14 am
+----------------------
+0.4.8		       => Added Manifest.skip, updated POD--hopefully--fixed location of the install, and double checked the test.  
+
+12/12/12 - 04:28:20 am
+----------------------
+0.4.9		       => Updated the README to an acceptable, though minimalistic, level. 
+
+12/12/12 - 06:17:57 am
+----------------------
+0.5.0, 0.5.1	       => Added putfile, which can print a file given as an arg, added some more tests--lots more really--and that's about it.
+
+12/22/12 - 06:23:28 pm
+----------------------
+0.60		       => Adopted new versioning scheme (major).(minor)(revision)_(beta)b.(alpha)a -- 1.23_4b.5a; added support for printing a specific line from a file and for printing without a newline, see printpp for printing without a newline.  
+
+12/27/12 - 04:20:21 am 
+----------------------
+0.61, 0.62	      => Fixed the test files, removed t/atest.t, renamed test.t to println.t, added t/putfile.t and t/putfileln.t--commented out the 'return bless{};' lines in the module.  Added more comments to the module; I think that's all I changed today.  
+
+12/27/12 - 03:33:29 pm
+----------------------
+0.63		     => Updating documentation, and other stuffs... I already changed to version .63 as of yesterday, so I don't really remember what brought on said change.  I'll check the source files, though and see if I can't figure it out and then add said changes to this file. 
+
+12/30/12 - 10:24:19 pm
+----------------------
+0.64		    => Updating tests--they reside under t/--switching from Test::More to Test::Most.
+
+12/31/12 - 05:49:50 pm
+----------------------
+0.65		    => Fixed some unknown testing error--updated readme too.     

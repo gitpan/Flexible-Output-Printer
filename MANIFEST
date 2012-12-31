@@ -1,8 +1,15 @@
 Changes
+Flexible-Output-Printer-0.63.tar.gz
+Flexible-Output-Printer-0.64.tar.gz
+INSTALL
+lib/Flexible/Output/Printer.pm
 Makefile.PL
 MANIFEST
+META.json			Module JSON meta-data (added by MakeMaker)
+META.yml			Module YAML meta-data (added by MakeMaker)
 README
-t/test.t
-lib/Printer.pm
-META.yml                                 Module YAML meta-data (added by MakeMaker)
-META.json                                Module JSON meta-data (added by MakeMaker)
+t/echo.t
+t/println.t
+t/putfile.t
+t/putfileln.t
+TEST-INSTALL

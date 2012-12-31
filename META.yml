@@ -17,5 +17,6 @@ no_index:
   directory:
     - t
     - inc
-requires: {}
-version: v0.4.5
+requires:
+  Test::More: 0.47
+version: 0.65
