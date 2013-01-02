@@ -63,3 +63,7 @@ Revision history for Perl extension Printer.
 01/02/13 - 04:1624 am
 ----------------------
 0.68		    => (bug) fixed lncount() so that it won't automatically print the number of lines in the given file.  
+
+01/02/13 - 04:3739 am
+----------------------
+0.68.1a, 0.68.2a    => trying something new, (using the return bless {} again), in an effort to restore the compatibility found in version 0.4.5 -- added a TODO

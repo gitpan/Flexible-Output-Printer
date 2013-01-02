@@ -42,7 +42,7 @@ use warnings;
 use Exporter;
 use vars qw(@ISA @EXPORT);
 
-our $VERSION = '0.68.1a'; 
+our $VERSION = '0.68.2a'; 
 # (major).(minor)(revision).(beta)b(alpha)a -- my version scheme 
 @ISA = qw(Exporter);
 @EXPORT = qw(puts putc println echo putfile putfileln printpp lncount );
@@ -234,7 +234,7 @@ __END__
 
 =head1 NAME
 
-Flexible::Output::Printer - print output in whatever way feels most natural to you.  
+Flexible::Output::Printer - print output in a natural way, plus more.    
 
 =head1 SYNOPSIS 
 
