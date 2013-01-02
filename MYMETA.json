@@ -1,9 +1,9 @@
 {
    "abstract" : "Flexible::Output::Printer permits users to print output in a way that is remiscent of other programming languages such as UNIX Shell, Ruby, and Lua. (Working on adding support for more languages.)",
    "author" : [
-      "Alexej G. Magura <perlook@gmail.com>"
+      "Alexej G. Magura <agm2819@gmail.com>"
    ],
-   "dynamic_config" : 1,
+   "dynamic_config" : 0,
    "generated_by" : "ExtUtils::MakeMaker version 6.6302, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "bsd"
@@ -37,5 +37,5 @@
       }
    },
    "release_status" : "stable",
-   "version" : "v0.68.3b"
+   "version" : "0.63"
 }

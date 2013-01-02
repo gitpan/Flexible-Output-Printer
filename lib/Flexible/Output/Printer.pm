@@ -42,10 +42,10 @@ use warnings;
 use Exporter;
 use vars qw(@ISA @EXPORT);
 
-our $VERSION = '0.68.2a'; 
+our $VERSION = '0.68.3b'; 
 # (major).(minor)(revision).(beta)b(alpha)a -- my version scheme 
 @ISA = qw(Exporter);
-@EXPORT = qw(puts putc println echo putfile putfileln printpp lncount );
+@EXPORT = qw(puts putc println echo putfile putfileln lncount );
 
 # put a specified string onto the terminal -- putstring
 sub puts
@@ -55,7 +55,7 @@ sub puts
 	print "$_[0]";
 	shift @_;
     }
-    return bless {}; # return self so that this module is Object Oriented.  
+#    return bless {}; # return self so that this module is Object Oriented.  
 }
 # put a line from a specified file -- putfileline
 sub putfileln
@@ -91,7 +91,7 @@ sub putfileln
 	
 	close(File0) and return 1; # close file and return true. 
 
-       return bless {};	
+#       return bless {};	
 }
 sub putfile
 {
@@ -107,7 +107,7 @@ sub putfile
 	}
 	close(File0); # close the file
     }
-      return bless {};
+#      return bless {};
 }
 
 sub lncount
@@ -127,7 +127,7 @@ sub lncount
 #	print "$aindex\n";
 #	print "$aindex\n"; 
 	return $aindex; # return only.  
-	return bless {};
+#	return bless {};
 }
     
 
@@ -146,7 +146,7 @@ sub putc
 	   return; # fail--return a non-zero exit status.
        }
    }
-   return bless {};
+#   return bless {};
 }
 
 # print without a newline -- print++ (print plus plus)
@@ -165,7 +165,7 @@ sub println
     {
 	printf "@_\n";
     }
-    return bless {};
+#    return bless {};
 }
 # same as bash's echo
 sub echo 
@@ -194,7 +194,7 @@ sub echo
 	}
 
     }
-    return bless {};
+#    return bless {};
 }
 
 # find, if arg1 == arg2 return true.  

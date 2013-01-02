@@ -1,6 +1,8 @@
 #!/usr/bin/env perl
+use strict;
 use warnings;
-use Test::More tests => 3;
+#use Test::More tests => 3;
+use Test::Most tests => 3;
 
 use_ok("Flexible::Output::Printer");
 
