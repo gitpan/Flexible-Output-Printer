@@ -7,7 +7,7 @@
 | All rights reserved.                                                                 |
 |                                                                                      |
 | Redistribution and use in source and binary forms, with or without                   |
-| modification, `are permitted provided that the following conditions are met:         |
+| modification, are permitted provided that the following conditions are met:          |
 |                                                                                      |
 | Redistributions of source code must retain the above copyright notice, this          |
 | list of conditions and the following disclaimer.                                     |
@@ -42,11 +42,11 @@ use warnings;
 use Exporter;
 use vars qw(@ISA @EXPORT);
 
-our $VERSION = '0.65'; 
+our $VERSION = '0.68'; 
 # M0.m6r3 Major#.minor#revsion#
 # (major).(minor)(revision).(beta)b(alpha)a -- my version scheme 
 @ISA = qw(Exporter);
-@EXPORT = qw(puts putc println echo putfile putfileln printpp);
+@EXPORT = qw(puts putc println echo putfile putfileln printpp lncount );
 
 # put a specified string onto the terminal -- putstring
 sub puts
@@ -109,6 +109,27 @@ sub putfile
     #   return bless {}
 }
 
+sub lncount
+{
+    my $aindex = 0;
+    if ( @_ )
+    {
+	my $file = "$_[0]";
+	use Carp; # use carp, it is better than die for modules.  
+	open File0, "<", "$_[0]" or croak("Cannot locate or open file\n$!\n"); # open file or croak--that is, die.  
+	while ( <File0> )
+	{
+	    $aindex += 1;
+	}
+	close(File0); # close the file
+    }
+#	print "$aindex\n";
+#	print "$aindex\n"; 
+	return $aindex; # return only.  
+}
+    
+
+
 sub putc
 {
     if ( @_ ) # if there are args
@@ -144,18 +165,28 @@ sub println
     }
 #    return bless {};
 }
-
-sub echo
+# same as bash's echo
+sub echo 
 {
     if ( @_ )
     {
 	#print $_[0];
-	if ( $_[0] eq '-n' )
+	if ( $_[0] eq '-n' ) # no newline, print args without newline.  
 	{
 	    shift @_;
 	    print "@_";
 	}
-	else
+	elsif ( $_[0] eq '-e' )  # interpret escape sequences.  
+	{
+	    shift @_;
+	    printf "@_\n";
+	}
+	elsif ( $_[0] eq '-E' ) # do not interpret escape sequences
+	{
+	    shift @_;
+	    print "@_\n";
+	}
+	else # default.  
 	{
 	    print "@_\n";
 	}
@@ -164,9 +195,34 @@ sub echo
 #    return bless {};
 }
 
-
-
-
+# find, if arg1 == arg2 return true.  
+sub match
+{
+    if ( @_ )
+    {
+	if ( $_[0] =~ m/$_[1]/ )
+	{
+	    print "\nT\n\n";
+	}
+	else
+	{
+	    print "\nF\n\n";
+	}
+    }
+    
+}
+=find 
+# I want to start working on a new function which will open a specified file, search that file for a specified regex, and then return true and the line number if it finds it.  Based on MSDOS's file, which searches files for a given string.  
+#
+#
+#
+#
+#
+#
+#
+#
+=end find
+=cut 
 
 1;
 __END__
@@ -212,7 +268,7 @@ Alexej G. Magura
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2012, Alexej G. Magura
+Copyright (c) 2013, Alexej G. Magura
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
